@@ -1,0 +1,91 @@
+﻿@model IEnumerable<CoreWebClient.Models.IYD.Sector>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Inicio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SegundosLun)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SegundosMar)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SegundosMie)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SegundosJue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SegundosVie)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SegundosSab)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SegundosDom)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Inicio)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SegundosLun)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SegundosMar)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SegundosMie)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SegundosJue)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SegundosVie)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SegundosSab)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SegundosDom)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

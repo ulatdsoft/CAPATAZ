@@ -9,15 +9,16 @@ using System.Web.Http;
 
 namespace NetWebApi.Controllers
 {
-    public class SectoresController : ApiController
+    public class SectoresController : ApiController 
     {
         private readonly string mErr;
         readonly SectoresApi api;
 
-        SectoresController()
+        private SectoresController()
         {
             api = new SectoresApi();
-            api.Login("SUPERVISOR", "", 2, ref mErr);
+            if (!api.Login("SUPERVISOR", "", 2, ref mErr))
+                throw new Exception(mErr);
         }
 
         // GET: api/Sectores
@@ -27,19 +28,23 @@ namespace NetWebApi.Controllers
         }
 
         // GET: api/Sectores/5
-        public string Get(int id)
+        public Sector Get(int id)
         {
-            return "value";
+            return api.EntidadApi.GetFromId(id);
         }
 
         // POST: api/Sectores
-        public void Post([FromBody]string value)
+        public void Post([FromBody]Sector value)
         {
+
         }
 
         // PUT: api/Sectores/5
-        public void Put(int id, [FromBody]string value)
+        public void Put(int id, [FromBody]Sector value)
         {
+            var entidad = api.EntidadApi.GetFromId(id);
+            value.ShallowCopyFieldsTo(entidad);
+            api.EntidadApi.Actualizar(entidad);
         }
 
         // DELETE: api/Sectores/5
