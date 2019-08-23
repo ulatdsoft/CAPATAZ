@@ -1,4 +1,4 @@
-﻿using CAPATAZ.Aplicacion.IYD;
+﻿using CAPATAZ.Api.IYD;
 using CAPATAZ.Modelo.IYD;
 using System;
 using System.Collections.Generic;
@@ -17,7 +17,7 @@ namespace NetWebApi.Controllers
         private SectoresController()
         {
             api = new SectoresApi();
-            if (!api.Login("SUPERVISOR", "", 2, ref mErr))
+            if (!api.Login("SUPERVISOR", "", 193, ref mErr))
                 throw new Exception(mErr);
         }
 

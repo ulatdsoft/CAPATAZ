@@ -1,4 +1,4 @@
-﻿using CAPATAZ.Aplicacion.STK;
+﻿using CAPATAZ.Api.STK;
 using CAPATAZ.Modelo.STK;
 using System;
 using System.Collections.Generic;
@@ -17,7 +17,7 @@ namespace NetWebApi.Controllers
         ConfiguracionesDeTransaccionesStkController()
         {
             api = new ConfiguracionesDeTransaccionesStkApi();
-            api.Login("SUPERVISOR", "", 2, ref mErr);
+            api.Login("SUPERVISOR", "", 193, ref mErr);
         }
 
         // GET: api/Sectores

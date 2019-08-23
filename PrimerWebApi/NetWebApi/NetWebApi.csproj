@@ -46,8 +46,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CAPATAZ.Aplicacion">
-      <HintPath>C:\Capataz\Release\EXE\CAPATAZ.Aplicacion.dll</HintPath>
+    <Reference Include="CAPATAZ.Api">
+      <HintPath>..\..\..\..\..\..\..\Capataz\Release\EXE\CAPATAZ.Api.dll</HintPath>
     </Reference>
     <Reference Include="CAPATAZ.Datos, Version=19.1.607.1, Culture=neutral, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>

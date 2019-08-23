@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web.Http;
-using CAPATAZ.Aplicacion.UBI.OPic;
+using CAPATAZ.Api.UBI.OPic;
 using CAPATAZ.Modelo.UBI.OPic;
 
 namespace NetWebApi.Controllers
@@ -17,7 +17,7 @@ namespace NetWebApi.Controllers
         OrdenesDePickingDesdePedidosController()
         {
             api = new OrdenDePickingDesdePedidosApi();
-            api.Login("SUPERVISOR", "", 2, ref mErr);
+            api.Login("SUPERVISOR", "", 193, ref mErr);
         }
 
         // GET: api/OrdenesDePickingDesdePedidos

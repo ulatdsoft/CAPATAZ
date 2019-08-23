@@ -1,4 +1,4 @@
-﻿using CAPATAZ.Aplicacion.UBI;
+﻿using CAPATAZ.Api.UBI;
 using CAPATAZ.Modelo.UBI;
 using System;
 using System.Collections.Generic;
@@ -17,7 +17,7 @@ namespace NetWebApi.Controllers
         SaldosUbiController()
         {
             api = new SaldosDeUbicacionesApi(); 
-            api.Login("SUPERVISOR", "", 2, ref mErr);
+            api.Login("SUPERVISOR", "", 193, ref mErr);
         }
 
         // GET: api/SaldosUbi
