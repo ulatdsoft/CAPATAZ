@@ -11,7 +11,6 @@ namespace ClientOfLibraryNetFrameworkToMigrate
     {
         static void Main(string[] args)
         {
-            //08/18/2018 07:22:16
             var persona = new Persona() { Id = 100, Nombre = "Daniel", Nacimiento = DateTime.Parse("05/06/1979 00:00:00") };
 
             Console.WriteLine($"({persona.Id}) {persona.Nombre}, nacido el {persona.Nacimiento}");
