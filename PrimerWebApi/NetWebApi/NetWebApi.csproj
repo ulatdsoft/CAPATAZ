@@ -47,7 +47,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="CAPATAZ.Api">
-      <HintPath>..\..\..\..\..\..\..\Capataz\Release\EXE\CAPATAZ.Api.dll</HintPath>
+      <HintPath>C:\Capataz\Release\EXE\CAPATAZ.Api.dll</HintPath>
     </Reference>
     <Reference Include="CAPATAZ.Datos, Version=19.1.607.1, Culture=neutral, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
