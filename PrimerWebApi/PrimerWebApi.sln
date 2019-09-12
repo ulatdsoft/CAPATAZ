@@ -7,9 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetWebApi", "NetWebApi\NetW
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreWebClient", "CoreWebClient\CoreWebClient.csproj", "{C2794954-68A3-415C-8CD1-83B2FC4DC0C1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryNetFrameworkToMigrate", "LibraryNetFrameworkToMigrate\LibraryNetFrameworkToMigrate.csproj", "{8BFD1BDB-2F1E-459A-AB54-523A71296BB5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibraryNetFrameworkToMigrate", "LibraryNetFrameworkToMigrate\LibraryNetFrameworkToMigrate.csproj", "{8BFD1BDB-2F1E-459A-AB54-523A71296BB5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientOfLibraryNetFrameworkToMigrate", "ClientOfLibraryNetFrameworkToMigrate\ClientOfLibraryNetFrameworkToMigrate.csproj", "{9EF1433C-E681-4668-9E59-43864555EC9C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryNetFrameworkToMigrate.Data", "LibraryNetFrameworkToMigrate.Data\LibraryNetFrameworkToMigrate.Data.csproj", "{3C9FE304-B62C-4828-94C0-5BFAF248E1F6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{9EF1433C-E681-4668-9E59-43864555EC9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9EF1433C-E681-4668-9E59-43864555EC9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9EF1433C-E681-4668-9E59-43864555EC9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C9FE304-B62C-4828-94C0-5BFAF248E1F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C9FE304-B62C-4828-94C0-5BFAF248E1F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C9FE304-B62C-4828-94C0-5BFAF248E1F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C9FE304-B62C-4828-94C0-5BFAF248E1F6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -4,17 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9EF1433C-E681-4668-9E59-43864555EC9C}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>ClientOfLibraryNetFrameworkToMigrate</RootNamespace>
-    <AssemblyName>ClientOfLibraryNetFrameworkToMigrate</AssemblyName>
+    <ProjectGuid>{3C9FE304-B62C-4828-94C0-5BFAF248E1F6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LibraryNetFrameworkToMigrate.Data</RootNamespace>
+    <AssemblyName>LibraryNetFrameworkToMigrate.Data</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>x86</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,15 +21,16 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>x86</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
@@ -50,7 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="LibraryNetFrameworkToMigrateContext.cs" />
+    <Compile Include="Migrations\201909121509481_Inicial.cs" />
+    <Compile Include="Migrations\201909121509481_Inicial.Designer.cs">
+      <DependentUpon>201909121509481_Inicial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -58,14 +63,15 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\LibraryNetFrameworkToMigrate.Data\LibraryNetFrameworkToMigrate.Data.csproj">
-      <Project>{3c9fe304-b62c-4828-94c0-5bfaf248e1f6}</Project>
-      <Name>LibraryNetFrameworkToMigrate.Data</Name>
-    </ProjectReference>
     <ProjectReference Include="..\LibraryNetFrameworkToMigrate\LibraryNetFrameworkToMigrate.csproj">
       <Project>{8bfd1bdb-2f1e-459a-ab54-523a71296bb5}</Project>
       <Name>LibraryNetFrameworkToMigrate</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201909121509481_Inicial.resx">
+      <DependentUpon>201909121509481_Inicial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
