@@ -55,11 +55,17 @@
     <Compile Include="Migrations\201909121509481_Inicial.Designer.cs">
       <DependentUpon>201909121509481_Inicial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201909121832298_IndiceUnico.cs" />
+    <Compile Include="Migrations\201909121832298_IndiceUnico.Designer.cs">
+      <DependentUpon>201909121832298_IndiceUnico.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -71,6 +77,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201909121509481_Inicial.resx">
       <DependentUpon>201909121509481_Inicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909121832298_IndiceUnico.resx">
+      <DependentUpon>201909121832298_IndiceUnico.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
