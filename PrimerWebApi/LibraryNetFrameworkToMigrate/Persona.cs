@@ -12,7 +12,7 @@ namespace LibraryNetFrameworkToMigrate
     {
         public int Id { get; set; }
 
-        [Index(IsUnique = true, Order = 1)]
+        //[Index(IsUnique = true, Order = 1)]
         [MaxLength(100)]
         public string Nombre { get; set; }
 

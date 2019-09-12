@@ -59,6 +59,10 @@
     <Compile Include="Migrations\201909121832298_IndiceUnico.Designer.cs">
       <DependentUpon>201909121832298_IndiceUnico.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201909121843055_ModeloCoreMasIndiceFluentAPI.cs" />
+    <Compile Include="Migrations\201909121843055_ModeloCoreMasIndiceFluentAPI.Designer.cs">
+      <DependentUpon>201909121843055_ModeloCoreMasIndiceFluentAPI.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -80,6 +84,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201909121832298_IndiceUnico.resx">
       <DependentUpon>201909121832298_IndiceUnico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909121843055_ModeloCoreMasIndiceFluentAPI.resx">
+      <DependentUpon>201909121843055_ModeloCoreMasIndiceFluentAPI.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

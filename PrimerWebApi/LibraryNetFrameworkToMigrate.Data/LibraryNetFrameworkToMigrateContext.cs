@@ -14,7 +14,13 @@ namespace LibraryNetFrameworkToMigrate.Data
             //Database.SetInitializer(new DropCreateDatabaseAlways<LibraryNetFrameworkToMigrateContext>());
         }
 
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Persona>().HasIndex(b => b.Nombre).IsUnique();
+        }
+
 
         public DbSet<Persona> Personas { get; set; }
+
     }
 }
