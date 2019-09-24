@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientOfLibraryNetFramework
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryNetFrameworkToMigrate.Data", "LibraryNetFrameworkToMigrate.Data\LibraryNetFrameworkToMigrate.Data.csproj", "{3C9FE304-B62C-4828-94C0-5BFAF248E1F6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreWebApi", "CoreWebApi\CoreWebApi.csproj", "{735C076A-C992-40C9-8F0C-22FE1EC6227E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{3C9FE304-B62C-4828-94C0-5BFAF248E1F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3C9FE304-B62C-4828-94C0-5BFAF248E1F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3C9FE304-B62C-4828-94C0-5BFAF248E1F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{735C076A-C992-40C9-8F0C-22FE1EC6227E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{735C076A-C992-40C9-8F0C-22FE1EC6227E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{735C076A-C992-40C9-8F0C-22FE1EC6227E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{735C076A-C992-40C9-8F0C-22FE1EC6227E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

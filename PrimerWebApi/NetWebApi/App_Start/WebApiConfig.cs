@@ -3,6 +3,7 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Runtime.Serialization;
 using System.Web.Http;
 
@@ -23,7 +24,7 @@ namespace NetWebApi
                 defaults: new { id = RouteParameter.Optional }
             );
 
-            // CAPATAZ
+            // Formateo del JSON copiado de CAPATAZ
             //config.Formatters
             //      .JsonFormatter
             //      .SerializerSettings
@@ -42,8 +43,7 @@ namespace NetWebApi
             //      .Converters
             //      .Add(new Newtonsoft.Json.Converters.StringEnumConverter());
 
-
-            //GOOGLEADO
+            // Formateo del JSON  GOOGLEADO
             config.Formatters
                   .JsonFormatter
                   .SerializerSettings
@@ -52,6 +52,12 @@ namespace NetWebApi
                   .JsonFormatter
                   .SerializerSettings
                   .PreserveReferencesHandling = PreserveReferencesHandling.All;
+
+
+            // Para que devuelva JSON por defecto
+            config.Formatters.JsonFormatter.SupportedMediaTypes
+                  .Add(new MediaTypeHeaderValue("text/html"));
+
         }
     }
 }

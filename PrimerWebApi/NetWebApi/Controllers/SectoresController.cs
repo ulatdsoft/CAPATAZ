@@ -17,7 +17,7 @@ namespace NetWebApi.Controllers
         private SectoresController()
         {
             api = new SectoresApi();
-            if (!api.Login("SUPERVISOR", "", 193, ref mErr))
+            if (!api.Login("SUPERVISOR", "", 2, ref mErr))
                 throw new Exception(mErr);
         }
 
