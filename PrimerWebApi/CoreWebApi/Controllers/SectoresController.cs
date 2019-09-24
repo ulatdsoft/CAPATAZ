@@ -2,41 +2,45 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CAPATAZ.Modelo.IYD;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CoreWebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ValuesController : ControllerBase
+    public class SectoresController : ControllerBase
     {
-        // GET api/values
+        // GET: api/Sectores
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        public IEnumerable<Sector> Get()
         {
-            return new string[] { "value1", "value2", "ValorDeCoreWebApi2.2" };
+            return new Sector[] {
+                new Sector {Id=1, Nombre = "Sector UNO"}
+            };
         }
 
-        // GET api/values/5
-        [HttpGet("{id}")]
-        public ActionResult<string> Get(int id)
+        // GET: api/Sectores/5
+        [HttpGet("{id}", Name = "Get")]
+        public Sector Get(int id)
         {
-            return "value";
+            return new Sector { Id = 1, Nombre = "Sector UNO" };
         }
 
-        // POST api/values
+        // POST: api/Sectores
         [HttpPost]
         public void Post([FromBody] string value)
         {
         }
 
-        // PUT api/values/5
+        // PUT: api/Sectores/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] string value)
         {
         }
 
-        // DELETE api/values/5
+        // DELETE: api/ApiWithActions/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
