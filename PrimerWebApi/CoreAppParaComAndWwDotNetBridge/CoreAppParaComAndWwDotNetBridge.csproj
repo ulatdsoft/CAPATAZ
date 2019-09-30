@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <!--<TargetFramework>netstandard2.0</TargetFramework>-->
+         <!--<TargetFrameworks>net472;netstandard2.0;netcoreapp3.0</TargetFrameworks>--> 
+         <TargetFrameworks>netstandard2.0;net472;netcoreapp3.0</TargetFrameworks> 
+    <ApplicationIcon />
+    <StartupObject />
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <COMReference Include="caplogon.dll">
+      <Guid>716cb3f4-00dd-4d72-b50f-ef43d90cd21a</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Lcid>0</Lcid>
+      <Isolated>false</Isolated>
+      <EmbedInteropTypes>true</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="capps.dll">
+      <Guid>425f5305-fa66-4363-ae52-e0e81f0ff064</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Lcid>0</Lcid>
+      <Isolated>false</Isolated>
+      <EmbedInteropTypes>true</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="CAPATAZ.Modelo">
+      <HintPath>C:\Capataz\Release\EXE\CAPATAZ.Modelo.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>
