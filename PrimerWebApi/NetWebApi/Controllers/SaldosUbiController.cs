@@ -11,13 +11,12 @@ namespace NetWebApi.Controllers
 {
     public class SaldosUbiController : ApiController
     {
-        private readonly string mErr;
         readonly SaldosDeUbicacionesApi api;
 
         SaldosUbiController()
         {
-            api = new SaldosDeUbicacionesApi(); 
-            api.Login("SUPERVISOR", "", 193, ref mErr);
+            api = new SaldosDeUbicacionesApi();
+            api.Login("SUPERVISOR", "", 193, out _);
         }
 
         // GET: api/SaldosUbi

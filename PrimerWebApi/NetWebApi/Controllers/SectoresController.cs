@@ -9,15 +9,18 @@ using System.Web.Http;
 
 namespace NetWebApi.Controllers
 {
+    /// <summary>
+    /// ANTENCION!!!
+    /// Creado con: Web API 2 Controller with read/write actions.
+    /// </summary>
     public class SectoresController : ApiController 
     {
-        private readonly string mErr;
         readonly SectorApi api;
 
         private SectoresController()
         {
             api = new SectorApi();
-            if (!api.Login("SUPERVISOR", "", 247, ref mErr))
+            if (!api.Login("SUPERVISOR", "", 247, out string mErr))
                 throw new Exception(mErr);
         }
 
@@ -30,7 +33,7 @@ namespace NetWebApi.Controllers
         // GET: api/Sectores/5
         public Sector Get(int id)
         {
-            return api.GetFromId(id);
+            return api.GetByKeyOffLine(id);
         }
 
         // POST: api/Sectores
@@ -42,7 +45,7 @@ namespace NetWebApi.Controllers
         // PUT: api/Sectores/5
         public void Put(int id, [FromBody]Sector value)
         {
-            var entidad = api.GetFromId(id);
+            var entidad = api.GetByKeyOffLine(id);
             value.ShallowCopyFieldsTo(entidad);
             api.Actualizar(entidad);
         }

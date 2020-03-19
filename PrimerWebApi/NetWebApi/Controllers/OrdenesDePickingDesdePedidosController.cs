@@ -9,16 +9,20 @@ using CAPATAZ.Modelo.UBI.OPic;
 
 namespace NetWebApi.Controllers
 {
+    /// <summary>
+    /// ANTENCION!!!
+    /// Creado con: Web API 2 Controller with read/write actions.
+    /// </summary>
+    
     //[Route("api/[controller]")]
     public class OrdenesDePickingDesdePedidosController : ApiController
     {
-        private readonly string mErr;
         readonly OrdenDePickingDesdePedidosApi api;
 
         OrdenesDePickingDesdePedidosController()
         {
             api = new OrdenDePickingDesdePedidosApi();
-            api.Login("SUPERVISOR", "", 247, ref mErr);
+            api.Login("SUPERVISOR", "", 247, out _);
         }
 
         // GET: api/OrdenesDePickingDesdePedidos
@@ -28,9 +32,9 @@ namespace NetWebApi.Controllers
         }
 
         // GET: api/OrdenesDePickingDesdePedidos/5
-        public OrdenDePickingDesdePedidos Get(int id)
+        public OrdenDePickingDesdePedidos Get(string id)
         {
-            var oPicPed = api.GetFromIdOffLine(id);
+            var oPicPed = api.GetByKeyOffLine(id);
             var js = oPicPed.GenJson(2);
             return js.GetObjectFromJson<OrdenDePickingDesdePedidos>();
         }

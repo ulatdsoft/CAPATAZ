@@ -8,16 +8,18 @@ using System.Net.Http;
 using System.Web.Http;
 
 namespace NetWebApi.Controllers
-{
+{    /// <summary>
+     /// ANTENCION!!!
+     /// Creado con: Web API 2 Controller with read/write actions.
+     /// </summary>
     public class ConfiguracionesDeTransaccionesStkController : ApiController
     {
-        private readonly string mErr;
         readonly ConfiguracionDeTransaccionesStkApi api;
 
         ConfiguracionesDeTransaccionesStkController()
         {
             api = new ConfiguracionDeTransaccionesStkApi();
-            api.Login("SUPERVISOR", "", 193, ref mErr);
+            api.Login("SUPERVISOR", "", 193, out _);
         }
 
         // GET: api/Sectores

@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net.Http.Headers;
 using System.Runtime.Serialization;
 using System.Web.Http;
+using System.Web.Mvc;
 
 namespace NetWebApi
 {
@@ -21,8 +22,7 @@ namespace NetWebApi
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{id}",
-                defaults: new { id = RouteParameter.Optional }
-            );
+                defaults: new { id = RouteParameter.Optional });
 
             //// Formateo del JSON copiado de CAPATAZ
             config.Formatters

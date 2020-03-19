@@ -173,6 +173,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\ConfiguracionesDeTransaccionesStkController.cs" />
+    <Compile Include="Controllers\DepositosController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\OrdenesDePickingDesdePedidosController.cs" />
     <Compile Include="Controllers\PersonasController.cs" />

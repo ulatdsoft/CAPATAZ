@@ -445,9 +445,8 @@ namespace NetWebApi.Areas.HelpPage
             Collection<ApiDescription> apis = config.Services.GetApiExplorer().ApiDescriptions;
             foreach (ApiDescription api in apis)
             {
-                ApiParameterDescription parameterDescription;
                 Type parameterType;
-                if (TryGetResourceParameter(api, config, out parameterDescription, out parameterType))
+                if (TryGetResourceParameter(api, config, out _, out parameterType))
                 {
                     modelGenerator.GetOrCreateModelDescription(parameterType);
                 }
