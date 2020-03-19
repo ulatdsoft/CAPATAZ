@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Web.Http;
 using CAPATAZ.Api.UBI.OPic;
+using CAPATAZ.Datos.Utils;
 using CAPATAZ.Modelo.UBI.OPic;
 
 namespace NetWebApi.Controllers
@@ -17,20 +18,29 @@ namespace NetWebApi.Controllers
         OrdenesDePickingDesdePedidosController()
         {
             api = new OrdenDePickingDesdePedidosApi();
-            api.Login("SUPERVISOR", "", 193, ref mErr);
+            api.Login("SUPERVISOR", "", 247, ref mErr);
         }
 
         // GET: api/OrdenesDePickingDesdePedidos
         public IEnumerable<OrdenDePickingDesdePedidos> Get()
         {
-            return api.EntidadApi.GetListaOffLine(x => true);
+            return api.GetListaOffLine(x => true);
         }
 
         // GET: api/OrdenesDePickingDesdePedidos/5
-        public string Get(int id)
+        public OrdenDePickingDesdePedidos Get(int id)
         {
-            return "value";
+            var oPicPed = api.GetFromIdOffLine(id);
+            var js = oPicPed.GenJson(2);
+            return js.GetObjectFromJson<OrdenDePickingDesdePedidos>();
         }
+
+
+        //public IHttpActionResult Get(int id)
+        //{
+        //    var oPicPed = api.GetFromIdOffLine(id);
+        //    return Ok(oPicPed.GenJson(3).GetObjectFromJson<OrdenDePickingDesdePedidos>());
+        //}
 
         // POST: api/OrdenesDePickingDesdePedidos
         public void Post([FromBody] string value)

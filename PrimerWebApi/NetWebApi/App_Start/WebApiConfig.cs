@@ -24,35 +24,34 @@ namespace NetWebApi
                 defaults: new { id = RouteParameter.Optional }
             );
 
-            // Formateo del JSON copiado de CAPATAZ
-            //config.Formatters
-            //      .JsonFormatter
-            //      .SerializerSettings
-            //      .ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
-            //config.Formatters
-            //      .JsonFormatter
-            //      .SerializerSettings
-            //      .PreserveReferencesHandling = PreserveReferencesHandling.None;
-            //config.Formatters
-            //      .JsonFormatter
-            //      .SerializerSettings
-            //      .NullValueHandling = NullValueHandling.Ignore;
+            //// Formateo del JSON copiado de CAPATAZ
+            config.Formatters
+                  .JsonFormatter
+                  .SerializerSettings
+                  .ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
+            config.Formatters
+                  .JsonFormatter
+                  .SerializerSettings
+                  .PreserveReferencesHandling = PreserveReferencesHandling.None;
+            config.Formatters
+                  .JsonFormatter
+                  .SerializerSettings
+                  .NullValueHandling = NullValueHandling.Ignore;
             //config.Formatters
             //      .JsonFormatter
             //      .SerializerSettings
             //      .Converters
-            //      .Add(new Newtonsoft.Json.Converters.StringEnumConverter());
+            //      .Add(new Newtonsoft.Json.Converters.StringEnumConverter()); // Serializa Name de la Enum en lugar del Valor numérico
 
-            // Formateo del JSON  GOOGLEADO
-            config.Formatters
-                  .JsonFormatter
-                  .SerializerSettings
-                  .ReferenceLoopHandling = ReferenceLoopHandling.Serialize;
-            config.Formatters
-                  .JsonFormatter
-                  .SerializerSettings
-                  .PreserveReferencesHandling = PreserveReferencesHandling.All;
-
+            //// Formateo del JSON  GOOGLEADO
+            //config.Formatters
+            //      .JsonFormatter
+            //      .SerializerSettings
+            //      .ReferenceLoopHandling = ReferenceLoopHandling.Serialize;
+            //config.Formatters
+            //      .JsonFormatter
+            //      .SerializerSettings
+            //      .PreserveReferencesHandling = PreserveReferencesHandling.All; 
 
             // Para que devuelva JSON por defecto
             config.Formatters.JsonFormatter.SupportedMediaTypes

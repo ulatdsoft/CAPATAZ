@@ -12,18 +12,18 @@ namespace NetWebApi.Controllers
     public class ConfiguracionesDeTransaccionesStkController : ApiController
     {
         private readonly string mErr;
-        readonly ConfiguracionesDeTransaccionesStkApi api;
+        readonly ConfiguracionDeTransaccionesStkApi api;
 
         ConfiguracionesDeTransaccionesStkController()
         {
-            api = new ConfiguracionesDeTransaccionesStkApi();
+            api = new ConfiguracionDeTransaccionesStkApi();
             api.Login("SUPERVISOR", "", 193, ref mErr);
         }
 
         // GET: api/Sectores
         public IEnumerable<ConfiguracionDeTransaccionesStk> Get()
         {
-            var lista = api.EntidadApi.GetLista().ToList();
+            var lista = api.GetLista().ToList();
             return lista;
         }
 

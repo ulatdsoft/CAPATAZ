@@ -23,7 +23,7 @@ namespace NetWebApi.Controllers
         // GET: api/SaldosUbi
         public IEnumerable<SaldoUbi> Get()
         {
-            return api.EntidadApi.GetListaOffLine(x => true);
+            return api.GetListaOffLine(x => true);
         }
 
         // GET: api/SaldosUbi/5

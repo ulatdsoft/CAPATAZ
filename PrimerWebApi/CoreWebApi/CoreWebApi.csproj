@@ -21,7 +21,7 @@
 
   <ItemGroup>
     <Reference Include="CAPATAZ.Modelo">
-      <HintPath>C:\Capataz\Release\EXE\CAPATAZ.Modelo.dll</HintPath>
+      <HintPath>..\..\..\..\..\CAPATAZ\Release\EXE\CAPATAZ.Modelo.dll</HintPath>
     </Reference>
   </ItemGroup>
 
