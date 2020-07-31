@@ -17,24 +17,24 @@ namespace NetWebApi.Controllers
     //[Route("api/[controller]")]
     public class OrdenesDePickingDesdePedidosController : ApiController
     {
-        readonly OrdenDePickingDesdePedidosApi api;
+        readonly OPicPedApi api;
 
         OrdenesDePickingDesdePedidosController()
         {
-            api = new OrdenDePickingDesdePedidosApi();
+            api = new OPicPedApi();
             api.Login("SUPERVISOR", "", 247, out _);
         }
 
         // GET: api/OrdenesDePickingDesdePedidos
         public IEnumerable<OrdenDePickingDesdePedidos> Get()
         {
-            return api.GetListaOffLine(x => true);
+            return api.Gestor.GetListaOffLine(x => true);
         }
 
         // GET: api/OrdenesDePickingDesdePedidos/5
         public OrdenDePickingDesdePedidos Get(string id)
         {
-            var oPicPed = api.GetByKeyOffLine(id);
+            var oPicPed = api.Gestor.GetByKeyOffLine(id);
             var js = oPicPed.GenJson(2);
             return js.GetObjectFromJson<OrdenDePickingDesdePedidos>();
         }

@@ -22,7 +22,7 @@ namespace NetWebApi.Controllers
         // GET: api/SaldosUbi
         public IEnumerable<SaldoUbi> Get()
         {
-            return api.GetListaOffLine(x => true);
+            return api.Gestor.GetListaOffLine(x => true);
         }
 
         // GET: api/SaldosUbi/5

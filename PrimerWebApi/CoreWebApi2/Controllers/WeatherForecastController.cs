@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace CoreWebApi.Controllers
+namespace CoreWebApi2.Controllers
 {
     [ApiController]
     [Authorize]
@@ -25,8 +25,8 @@ namespace CoreWebApi.Controllers
             _logger = logger;
         }
 
+        //[AllowAnonymous]
         [HttpGet]
-        [AllowAnonymous]
         public IEnumerable<WeatherForecast> Get()
         {
             var rng = new Random();
@@ -38,5 +38,12 @@ namespace CoreWebApi.Controllers
             })
             .ToArray();
         }
+
+        //[HttpGet("{id}", Name = "Get")]
+        //public WeatherForecast Get(string id)
+        //{
+        //    var t = new WeatherForecast { Date = DateTime.Today, TemperatureC = 15, Summary = id, };
+        //    return t;
+        //}
     }
 }

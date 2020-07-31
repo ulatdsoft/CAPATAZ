@@ -17,7 +17,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreWebApi", "CoreWebApi\Co
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreAppParaComAndWwDotNetBridge", "CoreAppParaComAndWwDotNetBridge\CoreAppParaComAndWwDotNetBridge.csproj", "{36907949-9F04-4B90-B9E1-A6249EEECC40}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StdAppParaComAndWwDotNetBridge", "StdAppParaComAndWwDotNetBridge\StdAppParaComAndWwDotNetBridge.csproj", "{CC2D2C01-0F41-443B-AE6F-68AE454138E0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StdAppParaComAndWwDotNetBridge", "StdAppParaComAndWwDotNetBridge\StdAppParaComAndWwDotNetBridge.csproj", "{CC2D2C01-0F41-443B-AE6F-68AE454138E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreWebApi2", "CoreWebApi2\CoreWebApi2.csproj", "{545ED236-DC2F-4551-9B17-D23857E4CC5E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -91,6 +93,14 @@ Global
 		{CC2D2C01-0F41-443B-AE6F-68AE454138E0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{CC2D2C01-0F41-443B-AE6F-68AE454138E0}.Release|x86.ActiveCfg = Release|Any CPU
 		{CC2D2C01-0F41-443B-AE6F-68AE454138E0}.Release|x86.Build.0 = Release|Any CPU
+		{545ED236-DC2F-4551-9B17-D23857E4CC5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{545ED236-DC2F-4551-9B17-D23857E4CC5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{545ED236-DC2F-4551-9B17-D23857E4CC5E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{545ED236-DC2F-4551-9B17-D23857E4CC5E}.Debug|x86.Build.0 = Debug|Any CPU
+		{545ED236-DC2F-4551-9B17-D23857E4CC5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{545ED236-DC2F-4551-9B17-D23857E4CC5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{545ED236-DC2F-4551-9B17-D23857E4CC5E}.Release|x86.ActiveCfg = Release|Any CPU
+		{545ED236-DC2F-4551-9B17-D23857E4CC5E}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

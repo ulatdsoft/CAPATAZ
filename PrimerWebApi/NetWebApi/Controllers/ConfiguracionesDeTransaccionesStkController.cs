@@ -1,5 +1,6 @@
 ﻿using CAPATAZ.Api.STK;
 using CAPATAZ.Modelo.STK;
+using CAPATAZ.Modelo.STK.Transaccion;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,9 +24,9 @@ namespace NetWebApi.Controllers
         }
 
         // GET: api/Sectores
-        public IEnumerable<ConfiguracionDeTransaccionesStk> Get()
+        public IEnumerable<ConfiguracionDeTStk> Get()
         {
-            var lista = api.GetLista().ToList();
+            var lista = api.Gestor.GetLista().ToList();
             return lista;
         }
 

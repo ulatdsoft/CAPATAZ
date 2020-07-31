@@ -28,23 +28,23 @@ namespace NetWebApi.Controllers
         // GET: api/Depositos
         public IEnumerable<Deposito> Lista()
         {
-            return api.GetListaOffLine(x => true);
+            return api.Gestor.GetListaOffLine(x => true);
         }
 
         // GET: api/Depositos/5
         public Deposito Get(string id)
         {
-            var dep = api.GetByKeyOffLine(id);
+            var dep = api.Gestor.GetByKeyOffLine(id);
             var js = dep.GenJson(2);
             return js.GetObjectFromJson<Deposito>();
         }
 
-        public Ubicacion GetUbicacion(string codDeposito, int numeroUbi)
-        {
-            var ubi = api.GetUbicacion(codDeposito, numeroUbi);
-            var js = ubi.GenJson(2);
-            return js.GetObjectFromJson<Ubicacion>();
-        }
+        //public Ubicacion GetUbicacion(string codDeposito, int numeroUbi)
+        //{
+        //    //var ubi = api.Gestor.GetUbicacion(codDeposito, numeroUbi);
+        //    //var js = ubi.GenJson(2);
+        //    //return js.GetObjectFromJson<Ubicacion>();
+        //}
 
         // POST: api/Depositos
         public void Post([FromBody]string value)

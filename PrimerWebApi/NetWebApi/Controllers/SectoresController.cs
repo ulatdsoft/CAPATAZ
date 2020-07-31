@@ -20,20 +20,20 @@ namespace NetWebApi.Controllers
         private SectoresController()
         {
             api = new SectorApi();
-            if (!api.Login("SUPERVISOR", "", 247, out string mErr))
+            if (!api.Login("SUPERVISOR", "", 2, out string mErr))
                 throw new Exception(mErr);
         }
 
         // GET: api/Sectores
         public IEnumerable<Sector> Get()
         {
-            return api.GetLista();
+            return api.Gestor.GetLista();
         }
 
         // GET: api/Sectores/5
         public Sector Get(int id)
         {
-            return api.GetByKeyOffLine(id);
+            return api.Gestor.GetByKeyOffLine(id);
         }
 
         // POST: api/Sectores
@@ -45,9 +45,9 @@ namespace NetWebApi.Controllers
         // PUT: api/Sectores/5
         public void Put(int id, [FromBody]Sector value)
         {
-            var entidad = api.GetByKeyOffLine(id);
+            var entidad = api.Gestor.GetByKeyOffLine(id);
             value.ShallowCopyFieldsTo(entidad);
-            api.Actualizar(entidad);
+            api.Gestor.GuardarCambios();
         }
 
         // DELETE: api/Sectores/5
